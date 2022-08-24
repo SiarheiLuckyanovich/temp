@@ -57,7 +57,7 @@ mylib.cpp, mylib.h) во втором модуле mylib объявить 3 функции:
  FOO::initarr (arr, size);
  FOO::printarr (arr, size);
  FOO:: checkarr(arr, size);
-
+ cout  << endl;
 
 /*================================================================================================================
 Задание 2 - Описать макрокоманду (через директиву define),
@@ -76,8 +76,6 @@ false, вывести на экран «true» или «false»..
 
   cout << check_lim (num, lim, flag) << endl;
   cout  << endl;
-
-
 
 /*================================================================================================================
 Задание 3 - Задайте массив типа int. Пусть его размер задается через
@@ -124,15 +122,10 @@ false, вывести на экран «true» или «false»..
     Buh = { 42, 0002, 2500 };
     Rab = { 22, 0003, 1500 };
 
-    cout << Dir.age << sizeof(Dir.age) << Dir.id << sizeof(Dir.id) << Dir.salary << sizeof(Dir.salary) <<endl;
+    cout << Dir.age << Dir.id << Dir.salary <<endl;
+    cout << sizeof(Dir.age) << sizeof(Dir.id) << sizeof(Dir.salary) <<endl;
 
-        //delete arr[i].byte; // Освобождаем память занятую указателем на байт
-       // delete arr[i].pole;// Освобождаем память занятую указателем на вещественное число
-      //cout << *shtat << sizeof(*shtat) << endl;
-     //delete shtat;
-
-cout << "size " << sizeof(Employee) << endl;
-
+    cout << "size of Employee " << sizeof(Employee) << endl;
 
 /*================================================================================================================
 Задание 5 - * Сделайте задание 1 добавив свой неймспейс во втором
