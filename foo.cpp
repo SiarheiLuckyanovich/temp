@@ -1,7 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
+
 using namespace std;
 
+namespace FOO
+{
 
     void checkarr(const float * arr, size_t size)
 {
@@ -45,4 +48,4 @@ void printarr3(const int * arr, size_t size)
     }
   cout << endl;
 }
-
+}

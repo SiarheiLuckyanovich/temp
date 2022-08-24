@@ -5,11 +5,28 @@
 выполнил ЛукьяновичСС
 на CodeBlocks 17.12
 */
+//===========================================================================================================
 #define check_lim( a ,b, c) (((a >= 0)&& (a < b)) ? (c="True") : (c="Fals"))
 #define size3 10
-#define SwapINT(a, b)\
-    for (i=0; i<size; i++)\
-    arr3[i] = arr3[i*rand()%10];
+//===========================================================================================================
+#define SwapINT(a, b)                           \
+  for (size_t i = 0; i < size; i++)                \
+    {                                           \
+        bool flag = true;                       \
+        for (size_t j = 0; j < 10 - (i + 1); j++)  \
+            {                                   \
+                if (arr3[j] > arr3[j + 1])      \
+                {                               \
+                    flag = false;               \
+                    swap (arr3[j], arr3[j + 1]);\
+                }                               \
+            }                                   \
+        if (flag)                               \
+        {break;                                 \
+        }                                       \
+    }
+
+//===========================================================================================================
 
 #pragma pack(push, 1)
 struct Employee
@@ -19,7 +36,7 @@ struct Employee
         double salary;
     };
 #pragma pack (pop)
-
+//===========================================================================================================
 using namespace std;
 int main()
 {
@@ -37,9 +54,9 @@ mylib.cpp, mylib.h) во втором модуле mylib объявить 3 функции:
 
  const size_t size = 10;
  float arr[size];
- initarr (arr, size);
- printarr (arr, size);
- checkarr(arr, size);
+ FOO::initarr (arr, size);
+ FOO::printarr (arr, size);
+ FOO:: checkarr(arr, size);
 
 
 /*================================================================================================================
@@ -77,18 +94,19 @@ false, вывести на экран «true» или «false»..
     unsigned int i;
     int arr3[size3];
     for (i=0; i<size; i++)
-    cin >> arr3[i];
+    {
+        cin >> arr3[i];
+    }
 
-    cout << "Here the array:" << endl;
-    printarr3 ( arr3, size3);
+    cout << "It's your array:" << endl;
+    FOO::printarr3 ( arr3, size3);
     cout << endl;
+    cout << "It's Swapped array:" << endl;
 
     SwapINT( arr3, size3);
 
-    printarr3 ( arr3, size3);
-
-
-
+    FOO::printarr3 ( arr3, size3);
+    cout << endl;
 /*================================================================================================================
 Задание 4 - * Объявить структуру Сотрудник с различными полями.
 Сделайте для нее побайтовое выравнивание с помощью
@@ -100,13 +118,13 @@ false, вывести на экран «true» или «false»..
     cout << "Task 4: The strukt: " << endl;
     cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     cout << endl;
-   // Employee *shtat;
-    Employee Dir, Buh, Rab;
 
+    Employee Dir, Buh, Rab;
     Dir = { 37, 0001, 3500 };
     Buh = { 42, 0002, 2500 };
     Rab = { 22, 0003, 1500 };
-    cout << sizeof(Dir) << endl;
+
+    cout << Dir.age << sizeof(Dir.age) << Dir.id << sizeof(Dir.id) << Dir.salary << sizeof(Dir.salary) <<endl;
 
         //delete arr[i].byte; // Освобождаем память занятую указателем на байт
        // delete arr[i].pole;// Освобождаем память занятую указателем на вещественное число
