@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1661337923 source:d:\rab\study\c\temp\foo.cpp
+1661341181 source:d:\rab\study\c\temp\foo.cpp
 	<iostream>
 	<stdlib.h>
 
-1661340210 source:d:\rab\study\c\temp\main.cpp
+1661346751 source:d:\rab\study\c\temp\main.cpp
 	<iostream>
 	<stdlib.h>
 	"foo.h"
 
-1661335346 d:\rab\study\c\temp\foo.h
+1661341181 d:\rab\study\c\temp\foo.h
 

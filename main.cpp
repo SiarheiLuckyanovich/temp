@@ -6,6 +6,12 @@
 íà CodeBlocks 17.12
 */
 #define check_lim( a ,b, c) (((a >= 0)&& (a < b)) ? (c="True") : (c="Fals"))
+#define size3 10
+#define SwapINT(a, b)\
+    for (i=0; i<size; i++)\
+    arr3[i] = arr3[i*rand()%10];
+
+
 using namespace std;
 int main()
 {
@@ -58,6 +64,19 @@ false, âûâåñòè íà ıêğàí «true» èëè «false»..
     cout << "Task 3: The text files: " << endl;
     cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     cout << endl;
+    cout << "Enter elelments of array: (10 times) " << endl;
+    int i;
+    int arr3[size3];
+    for (i=0; i<size; i++)
+    cin >> arr3[i];
+
+    cout << "Here the array:" << endl;
+    printarr3 ( arr3, size3);
+    cout << endl;
+
+    SwapINT( arr3, size3);
+
+    printarr3 ( arr3, size3);
 
 
 
