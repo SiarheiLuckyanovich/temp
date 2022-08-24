@@ -5,7 +5,7 @@
 âûïîëíèë Ëóêüÿíîâè÷ÑÑ
 íà CodeBlocks 17.12
 */
-#define check_lim (num) (if (num >=0 && num < lim) cout << "True";)
+#define check_lim( a ,b, c) (((a >= 0)&& (a < b)) ? (c="True") : (c="Fals"))
 using namespace std;
 int main()
 {
@@ -21,7 +21,7 @@ mylib.cpp, mylib.h) âî âòîğîì ìîäóëå mylib îáúÿâèòü 3 ôóíêöèè:
   cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
   cout << endl;
 
- size_t size = 10;
+ const size_t size = 10;
  float arr[size];
  initarr (arr, size);
  printarr (arr, size);
@@ -38,10 +38,12 @@ false, âûâåñòè íà ıêğàí «true» èëè «false»..
   cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
   cout << "Enter the numer & limit: " << endl;
 
+  string flag;
   int num, lim;
-  cin>> num >> lim;
+  cin >> num >> lim;
 
-
+  cout << check_lim (num, lim, flag) << endl;
+  cout  << endl;
 
 
 
