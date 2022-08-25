@@ -1,0 +1,8 @@
+ Dir age 37 Id 1001 salary 3500
+ Buh age 42 Id 1002 salary 2500
+ Rab age 22 Id 1003 salary 1500
+
+ Size of Dir.age  2 Dir.id 4 Dir.salary 8
+
+size of Strukt Employee  14
+

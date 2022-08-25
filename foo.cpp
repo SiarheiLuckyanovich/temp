@@ -48,4 +48,15 @@ void printarr3(const int * arr, size_t size)
     }
   cout << endl;
 }
+
+void initarr3 (int * arr, size_t size)
+{
+    int srand();
+    for (size_t i = 0; i < size; i++)
+    {
+        arr[i] = rand() % 100 - 50;
+    }
+
+}
+
 }

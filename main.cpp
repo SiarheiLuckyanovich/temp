@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include "foo.h"
+#include <fstream>
+#include <string>
 /*ДЗ.7 по с++
 выполнил ЛукьяновичСС
 на CodeBlocks 17.12
@@ -117,15 +119,37 @@ false, вывести на экран «true» или «false»..
     cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     cout << endl;
 
+    Employee * pStr = new Employee{};
     Employee Dir, Buh, Rab;
-    Dir = { 37, 0001, 3500 };
-    Buh = { 42, 0002, 2500 };
-    Rab = { 22, 0003, 1500 };
+    Dir = { 1001, 37, 3500 };
+    Buh = { 1002, 42, 2500 };
+    Rab = { 1003, 22, 1500 };
 
-    cout << Dir.age << Dir.id << Dir.salary <<endl;
-    cout << sizeof(Dir.age) << sizeof(Dir.id) << sizeof(Dir.salary) <<endl;
+    cout <<" Dir age " << Dir.age << " Id " << Dir.id << " salary " << Dir.salary <<endl;
+    cout <<" Buh age " << Buh.age << " Id " << Buh.id << " salary " << Buh.salary <<endl;
+    cout <<" Rab age " << Rab.age << " Id " << Rab.id << " salary " << Rab.salary <<endl;
 
-    cout << "size of Employee " << sizeof(Employee) << endl;
+    ofstream fout;
+    fout.open ( "Employee.txt" );
+    if (fout.is_open())
+    {
+        fout <<" Dir age " << Dir.age << " Id " << Dir.id << " salary " << Dir.salary <<endl;
+        fout <<" Buh age " << Buh.age << " Id " << Buh.id << " salary " << Buh.salary <<endl;
+        fout <<" Rab age " << Rab.age << " Id " << Rab.id << " salary " << Rab.salary <<endl;
+        fout << endl;
+        fout << " Size of Dir.age  "<< sizeof(Dir.age) << " Dir.id " << sizeof(Dir.id) << " Dir.salary " << sizeof(Dir.salary) <<endl;
+        fout << endl;
+        fout << "size of Strukt Employee  " << sizeof(Employee) << endl;
+        fout << endl;
+        fout . close();
+    }
+    delete pStr;
+    cout << endl;
+    cout << " Size of Dir.age  "<< sizeof(Dir.age) << " Dir.id " << sizeof(Dir.id) << " Dir.salary " << sizeof(Dir.salary) <<endl;
+    cout << endl;
+
+    cout << " Size of Strukt Employee  " << sizeof(Employee) << endl;
+    cout << endl;
 
 /*================================================================================================================
 Задание 5 - * Сделайте задание 1 добавив свой неймспейс во втором
@@ -134,7 +158,8 @@ false, вывести на экран «true» или «false»..
     cout << "Task 5: Namespace: " << endl;
     cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     cout << endl;
-
+    cout << " Created namespace FOO  "<< endl;
+    cout << endl;
 
 
  return 0;
